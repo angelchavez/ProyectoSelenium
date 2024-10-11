@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-06T22:58:37 GMT-05:00" name="Default suite" finished-at="2024-10-06T22:58:59 GMT-05:00" duration-ms="22026">
+  <suite started-at="2024-10-11T17:20:55 GMT-05:00" name="Default suite" finished-at="2024-10-11T17:21:05 GMT-05:00" duration-ms="9922">
     <groups>
     </groups>
-    <test started-at="2024-10-06T22:58:37 GMT-05:00" name="Default test" finished-at="2024-10-06T22:58:59 GMT-05:00" duration-ms="22026">
+    <test started-at="2024-10-11T17:20:55 GMT-05:00" name="Default test" finished-at="2024-10-11T17:21:05 GMT-05:00" duration-ms="9922">
       <class name="com.magento.tests.OrderTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.magento.tests.OrderTest@2eee3069]" started-at="2024-10-06T22:58:37 GMT-05:00" name="setup" finished-at="2024-10-06T22:58:46 GMT-05:00" duration-ms="9141" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.magento.tests.OrderTest@2eee3069]" started-at="2024-10-11T17:20:55 GMT-05:00" name="setup" finished-at="2024-10-11T17:21:00 GMT-05:00" duration-ms="5346" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="AddProducto()[pri:0, instance:com.magento.tests.OrderTest@2eee3069]" started-at="2024-10-06T22:58:46 GMT-05:00" name="AddProducto" finished-at="2024-10-06T22:58:59 GMT-05:00" duration-ms="12811" status="PASS">
+        <test-method signature="AddProducto()[pri:0, instance:com.magento.tests.OrderTest@2eee3069]" started-at="2024-10-11T17:21:00 GMT-05:00" name="AddProducto" finished-at="2024-10-11T17:21:05 GMT-05:00" duration-ms="4540" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddProducto -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.magento.tests.OrderTest@2eee3069]" started-at="2024-10-06T22:58:59 GMT-05:00" name="tearDown" finished-at="2024-10-06T22:58:59 GMT-05:00" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.magento.tests.OrderTest@2eee3069]" started-at="2024-10-11T17:21:05 GMT-05:00" name="tearDown" finished-at="2024-10-11T17:21:05 GMT-05:00" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.magento.tests.LoginTest">
+      <class name="com.magento.tests.OrderTest">
         <methods>
-          <include name="ForgotthenPass"/>
           <include name="tearDown"/>
+          <include name="AddProducto"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.magento.tests.LoginTest -->
+      </class> <!-- com.magento.tests.OrderTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
