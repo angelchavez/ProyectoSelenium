@@ -1,21 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-11T17:20:55 GMT-05:00" name="Default suite" finished-at="2024-10-11T17:21:05 GMT-05:00" duration-ms="9922">
+  <suite started-at="2024-10-21T23:11:58 GMT-05:00" name="Default suite" finished-at="2024-10-21T23:12:24 GMT-05:00" duration-ms="25830">
     <groups>
     </groups>
-    <test started-at="2024-10-11T17:20:55 GMT-05:00" name="Default test" finished-at="2024-10-11T17:21:05 GMT-05:00" duration-ms="9922">
+    <test started-at="2024-10-21T23:11:58 GMT-05:00" name="Default test" finished-at="2024-10-21T23:12:24 GMT-05:00" duration-ms="25830">
       <class name="com.magento.tests.OrderTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.magento.tests.OrderTest@2eee3069]" started-at="2024-10-11T17:20:55 GMT-05:00" name="setup" finished-at="2024-10-11T17:21:00 GMT-05:00" duration-ms="5346" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.magento.tests.OrderTest@2eee3069]" started-at="2024-10-21T23:11:58 GMT-05:00" name="setup" finished-at="2024-10-21T23:12:07 GMT-05:00" duration-ms="8438" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="AddProducto()[pri:0, instance:com.magento.tests.OrderTest@2eee3069]" started-at="2024-10-11T17:21:00 GMT-05:00" name="AddProducto" finished-at="2024-10-11T17:21:05 GMT-05:00" duration-ms="4540" status="PASS">
+        <test-method signature="AddProducto()[pri:0, instance:com.magento.tests.OrderTest@2eee3069]" started-at="2024-10-21T23:12:07 GMT-05:00" name="AddProducto" finished-at="2024-10-21T23:12:24 GMT-05:00" duration-ms="17317" status="FAIL">
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
+            <message>
+              <![CDATA[element not interactable
+  (Session info: chrome=129.0.6668.101)
+Build info: version: '4.24.0', revision: '748ffc9bc3'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fadf33038c8b30552058ccebfef34ba7, clickElement {id=f.9E6717579975D270CA6CCA329B17C365.d.F598E3E00C86695D4579416C80F7211E.e.154}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.101, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\Users\Angel\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52929}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52929/devtoo..., se:cdpVersion: 129.0.6668.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (fadf33038c8b30552058ccebfef34ba7)] -> xpath: (//span[@class='ui-menu-icon ui-icon ui-icon-carat-1-e'])[2]]
+Session ID: fadf33038c8b30552058ccebfef34ba7]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=129.0.6668.101)
+Build info: version: '4.24.0', revision: '748ffc9bc3'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fadf33038c8b30552058ccebfef34ba7, clickElement {id=f.9E6717579975D270CA6CCA329B17C365.d.F598E3E00C86695D4579416C80F7211E.e.154}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.101, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\Users\Angel\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52929}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52929/devtoo..., se:cdpVersion: 129.0.6668.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (fadf33038c8b30552058ccebfef34ba7)] -> xpath: (//span[@class='ui-menu-icon ui-icon ui-icon-carat-1-e'])[2]]
+Session ID: fadf33038c8b30552058ccebfef34ba7
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at com.magento.pages.OrderPage.AddProduct(OrderPage.java:42)
+at com.magento.tests.OrderTest.AddProducto(OrderTest.java:11)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddProducto -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.magento.tests.OrderTest@2eee3069]" started-at="2024-10-11T17:21:05 GMT-05:00" name="tearDown" finished-at="2024-10-11T17:21:05 GMT-05:00" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.magento.tests.OrderTest@2eee3069]" started-at="2024-10-21T23:12:24 GMT-05:00" name="tearDown" finished-at="2024-10-21T23:12:24 GMT-05:00" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

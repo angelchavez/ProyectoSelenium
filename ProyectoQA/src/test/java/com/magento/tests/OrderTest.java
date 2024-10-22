@@ -6,7 +6,7 @@ public class OrderTest extends BaseTest{
 	
 	
 	   @Test
-		public void AddProducto() {
+		public void AddProducto() { 
 
 			orderPage.AddProduct();
 		}

@@ -5,6 +5,7 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -14,11 +15,13 @@ import com.magento.utils.variables;
 public class BasePage extends BaseTest {
 
    WebDriver driver;
-	WebDriverWait wait;
+   WebDriverWait wait;
+ 
 
 	public BasePage(WebDriver driver) {
 		this.driver = driver;
 		this.wait = new WebDriverWait(driver, Duration.ofSeconds(variables.TIME_OUT));// creo en memoria
+		
 	}
 
 	public void visit() {
@@ -55,6 +58,8 @@ public class BasePage extends BaseTest {
 	public void type(String inputText, By locator) {
 	     driver.findElement(locator).sendKeys(inputText);
 	}
+	
+
 
 
 }
