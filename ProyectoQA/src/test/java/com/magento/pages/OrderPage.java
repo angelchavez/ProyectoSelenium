@@ -23,6 +23,7 @@ public class OrderPage extends BasePage{
     By SelectAddToCart = By.xpath("(//img[@alt='Cassius Sparring Tank'])[1]");
     By SelectTalla = By.xpath("(//div[@id='option-label-size-143-item-168'])[1]");
     By SelectColor = By.xpath("(//div[@id='option-label-color-93-item-50'])[1]");
+    By SelectColorOrden= By.xpath("(//div[@id='option-label-color-93-item-52'])[1]");
     By AddToCart = By.xpath("(//span[normalize-space()='Add to Cart'])[1]");
     By SelectImagen = By.xpath("//span[@class='counter-number']");
     By removeItem = By.xpath("//a[@title='Remove item']");
@@ -30,7 +31,9 @@ public class OrderPage extends BasePage{
     By EditCart = By.xpath("//span[normalize-space()='View and Edit Cart']");
     By SelectLabel1 = By.name("cart[387444][qty]");
     By SelectLabel2 = By.name("cart[387456][qty]");
-	
+    By ButtonUpdateCart = By.xpath("//span[normalize-space()='Update Shopping Cart']");
+	By ButtonCheckout = By.cssSelector("(//span[normalize-space()='Check Out with Multiple Addresses'])[1]");
+	By CantidadProduct = By.xpath("(//a[@class='product-item-link'])[3]");
 	  
 
 	
@@ -85,12 +88,25 @@ public class OrderPage extends BasePage{
 	       driver.findElement(SelectLabel1).sendKeys("2");
 	       driver.findElement(SelectLabel2).clear();
 	       driver.findElement(SelectLabel2).sendKeys("1");
-	      
-
-	       
-		   
+	       driver.findElement(ButtonUpdateCart).click();
+	
+	}
+	
+	public void CrearOrden() {
+		
+		   driver.findElement(signInLink).click();
+		   driver.findElement(email1).sendKeys("angel46_318@hotmail.com");
+	       driver.findElement(password).sendKeys("Elpeleador90@");
+	       driver.findElement(btnIngLogin).click();   
+	       driver.findElement(CantidadProduct).click(); 
+	       driver.findElement(SelectTalla).click();
+	       driver.findElement(SelectColorOrden).click();
+	       driver.findElement(AddToCart).click();
+		
 		
 	}
+
+
 	
 	
 		

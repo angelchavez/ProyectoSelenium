@@ -6,7 +6,7 @@
       <class name="com.magento.tests.OrderTest">
         <methods>
           <include name="tearDown"/>
-          <include name="MoficarProducto"/>
+          <include name="AddProducto"/>
           <include name="setup"/>
         </methods>
       </class> <!-- com.magento.tests.OrderTest -->
