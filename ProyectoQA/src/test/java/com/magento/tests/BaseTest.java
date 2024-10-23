@@ -4,6 +4,7 @@ package com.magento.tests;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -25,7 +26,7 @@ public class BaseTest {
 	public void setup() {
 		
 
-		driver = new ChromeDriver();
+		driver = new EdgeDriver();
 		registerPage = new RegisterPage(driver); //porque se lo pasa el driver porque sino el extendes que tengo no va funcionar
 		//el objeto solamente esta aqui y no esta al otro lado
 		homePage= new HomePage(driver);

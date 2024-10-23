@@ -6,8 +6,8 @@
       <class name="com.magento.tests.OrderTest">
         <methods>
           <include name="tearDown"/>
+          <include name="MoficarProducto"/>
           <include name="setup"/>
-          <include name="EliminarProducto"/>
         </methods>
       </class> <!-- com.magento.tests.OrderTest -->
     </classes>

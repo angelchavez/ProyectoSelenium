@@ -27,6 +27,9 @@ public class OrderPage extends BasePage{
     By SelectImagen = By.xpath("//span[@class='counter-number']");
     By removeItem = By.xpath("//a[@title='Remove item']");
     By SelectOK = By.xpath("(//span[normalize-space()='OK'])[1]");
+    By EditCart = By.xpath("//span[normalize-space()='View and Edit Cart']");
+    By SelectLabel1 = By.name("cart[387444][qty]");
+    By SelectLabel2 = By.name("cart[387456][qty]");
 	
 	  
 
@@ -69,6 +72,24 @@ public class OrderPage extends BasePage{
 	       driver.findElement(removeItem).click();
 	       driver.findElement(SelectOK).click();
 	       
+	}
+	public void ModifyProduct() {
+		
+		   driver.findElement(signInLink).click();
+		   driver.findElement(email1).sendKeys("angel46_318@hotmail.com");
+	       driver.findElement(password).sendKeys("Elpeleador90@");
+	       driver.findElement(btnIngLogin).click();          
+	       driver.findElement(SelectImagen).click();
+	       driver.findElement(EditCart).click();
+	       driver.findElement(SelectLabel1).clear();
+	       driver.findElement(SelectLabel1).sendKeys("2");
+	       driver.findElement(SelectLabel2).clear();
+	       driver.findElement(SelectLabel2).sendKeys("1");
+	      
+
+	       
+		   
+		
 	}
 	
 	
