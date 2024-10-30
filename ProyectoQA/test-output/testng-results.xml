@@ -1,126 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-23T18:03:07 GMT-05:00" name="Default suite" finished-at="2024-10-23T18:04:12 GMT-05:00" duration-ms="65043">
+  <suite started-at="2024-10-30T16:01:09 GMT-05:00" name="Default suite" finished-at="2024-10-30T16:01:18 GMT-05:00" duration-ms="8384">
     <groups>
     </groups>
-    <test started-at="2024-10-23T18:03:07 GMT-05:00" name="Default test" finished-at="2024-10-23T18:04:12 GMT-05:00" duration-ms="65043">
-      <class name="com.magento.tests.OrderTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.magento.tests.OrderTest@4df5bcb4]" started-at="2024-10-23T18:03:07 GMT-05:00" name="setup" finished-at="2024-10-23T18:03:13 GMT-05:00" duration-ms="6477" status="PASS">
+    <test started-at="2024-10-30T16:01:09 GMT-05:00" name="Default test" finished-at="2024-10-30T16:01:18 GMT-05:00" duration-ms="8384">
+      <class name="com.magento.tests.RegisterTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.magento.tests.RegisterTest@687ef2e0]" started-at="2024-10-30T16:01:09 GMT-05:00" name="setup" finished-at="2024-10-30T16:01:16 GMT-05:00" duration-ms="6566" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="AddProducto()[pri:0, instance:com.magento.tests.OrderTest@4df5bcb4]" started-at="2024-10-23T18:03:13 GMT-05:00" name="AddProducto" finished-at="2024-10-23T18:03:32 GMT-05:00" duration-ms="19278" status="FAIL">
-          <exception class="org.openqa.selenium.ElementNotInteractableException">
-            <message>
-              <![CDATA[element not interactable
-  (Session info: MicrosoftEdge=130.0.2849.46)
-Build info: version: '4.24.0', revision: '748ffc9bc3'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [1daed2085aa36d16c4f22f40129b0222, clickElement {id=f.9CCC5398840E7A41DD38D510B5566905.d.CCB50FA8C31BAD8C9182686CCDF41138.e.333}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 130.0.2849.46, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:57277}, msedge: {msedgedriverVersion: 130.0.2849.52 (0fc97f382530..., userDataDir: C:\Users\Usuario\AppData\Lo...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57277/devtoo..., se:cdpVersion: 130.0.2849.46, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[EdgeDriver: MicrosoftEdge on windows (1daed2085aa36d16c4f22f40129b0222)] -> xpath: (//img[@alt='Cassius Sparring Tank'])[1]]
-Session ID: 1daed2085aa36d16c4f22f40129b0222]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: MicrosoftEdge=130.0.2849.46)
-Build info: version: '4.24.0', revision: '748ffc9bc3'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [1daed2085aa36d16c4f22f40129b0222, clickElement {id=f.9CCC5398840E7A41DD38D510B5566905.d.CCB50FA8C31BAD8C9182686CCDF41138.e.333}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 130.0.2849.46, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:57277}, msedge: {msedgedriverVersion: 130.0.2849.52 (0fc97f382530..., userDataDir: C:\Users\Usuario\AppData\Lo...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57277/devtoo..., se:cdpVersion: 130.0.2849.46, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[EdgeDriver: MicrosoftEdge on windows (1daed2085aa36d16c4f22f40129b0222)] -> xpath: (//img[@alt='Cassius Sparring Tank'])[1]]
-Session ID: 1daed2085aa36d16c4f22f40129b0222
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at com.magento.pages.OrderPage.AddProduct(OrderPage.java:55)
-at com.magento.tests.OrderTest.AddProducto(OrderTest.java:10)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+        <test-method signature="registerCampos()[pri:0, instance:com.magento.tests.RegisterTest@687ef2e0]" started-at="2024-10-30T16:01:16 GMT-05:00" name="registerCampos" finished-at="2024-10-30T16:01:18 GMT-05:00" duration-ms="1778" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AddProducto -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.magento.tests.OrderTest@4df5bcb4]" started-at="2024-10-23T18:03:32 GMT-05:00" name="tearDown" finished-at="2024-10-23T18:03:32 GMT-05:00" duration-ms="2" status="PASS">
+        </test-method> <!-- registerCampos -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.magento.tests.RegisterTest@687ef2e0]" started-at="2024-10-30T16:01:18 GMT-05:00" name="tearDown" finished-at="2024-10-30T16:01:18 GMT-05:00" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.magento.tests.OrderTest@4df5bcb4]" started-at="2024-10-23T18:03:32 GMT-05:00" name="setup" finished-at="2024-10-23T18:03:39 GMT-05:00" duration-ms="6356" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="CreacionOrden()[pri:0, instance:com.magento.tests.OrderTest@4df5bcb4]" started-at="2024-10-23T18:03:39 GMT-05:00" name="CreacionOrden" finished-at="2024-10-23T18:03:45 GMT-05:00" duration-ms="6469" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CreacionOrden -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.magento.tests.OrderTest@4df5bcb4]" started-at="2024-10-23T18:03:45 GMT-05:00" name="tearDown" finished-at="2024-10-23T18:03:45 GMT-05:00" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.magento.tests.OrderTest@4df5bcb4]" started-at="2024-10-23T18:03:45 GMT-05:00" name="setup" finished-at="2024-10-23T18:03:51 GMT-05:00" duration-ms="5918" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="EliminarProducto()[pri:0, instance:com.magento.tests.OrderTest@4df5bcb4]" started-at="2024-10-23T18:03:51 GMT-05:00" name="EliminarProducto" finished-at="2024-10-23T18:03:56 GMT-05:00" duration-ms="4546" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- EliminarProducto -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.magento.tests.OrderTest@4df5bcb4]" started-at="2024-10-23T18:03:56 GMT-05:00" name="tearDown" finished-at="2024-10-23T18:03:56 GMT-05:00" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.magento.tests.OrderTest@4df5bcb4]" started-at="2024-10-23T18:03:56 GMT-05:00" name="setup" finished-at="2024-10-23T18:04:03 GMT-05:00" duration-ms="6799" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="MoficarProducto()[pri:0, instance:com.magento.tests.OrderTest@4df5bcb4]" started-at="2024-10-23T18:04:03 GMT-05:00" name="MoficarProducto" finished-at="2024-10-23T18:04:12 GMT-05:00" duration-ms="9132" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- MoficarProducto -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.magento.tests.OrderTest@4df5bcb4]" started-at="2024-10-23T18:04:12 GMT-05:00" name="tearDown" finished-at="2024-10-23T18:04:12 GMT-05:00" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.magento.tests.OrderTest -->
+      </class> <!-- com.magento.tests.RegisterTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

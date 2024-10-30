@@ -1,23 +1,28 @@
 package com.magento.tests;
 
 
-
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
 
 public class RegisterTest extends BaseTest {
 
-
-	//escenario happypazz
-	//@Test
-	/*
+	WebDriver driver;
+/*
+    @Test
 	public void registerAccount() {
 
-
-		registerPage.registroUser();
-		registerPage.registroCampos();
-
-
+    	
+		 registerPage.registroexitoso();
+		 
 	}*/
+	
+	@Test
+	public void registerCampos() {
+		
+		registerPage.registroCampos();
+	}
 
+	
 	//@Test
 	public void ComparacionCorreo() {
 
