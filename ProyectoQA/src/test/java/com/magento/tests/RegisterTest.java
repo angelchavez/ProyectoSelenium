@@ -2,11 +2,13 @@ package com.magento.tests;
 
 
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.Test;
+
 
 public class RegisterTest extends BaseTest {
 
 	WebDriver driver;
+	//private String e;
+	//private String p;
 /*
     @Test
 	public void registerAccount() {
@@ -14,35 +16,24 @@ public class RegisterTest extends BaseTest {
     	
 		 registerPage.registroexitoso();
 		 
-	}*/
 	
+    }
+    */
+    
+	/*
 	@Test
 	public void registerCampos() {
 		
 		registerPage.registroCampos();
-	}
-
-	
-	//@Test
-	public void ComparacionCorreo() {
-
-		registerPage.ingresarCorreovalido();
-	}
-	//@Test
-	public void ComparacionCorreo1() {
-		registerPage.correoSinArroba();
-	}
-
-	//@Test
-	public void ComparacionCorreo2() {
-		registerPage.correoSinDominio();
-	}
-
-	//@Test
-	public void ComparacionCorreo3() {
-		registerPage.correoDominioIncompleto();
-	}
-
+	}*/
+/*
+	@Test (dataProvider = "dataLogin")
+	public void CorreoDataProvider() {
+		
+		registerPage.doLoginCorreoValidoWithDataProvider( e, p);
+		
+	}*/
+			
 	//@Test
 	public void ContraseñaSegura() {
 		registerPage.ContrasenaSegura();

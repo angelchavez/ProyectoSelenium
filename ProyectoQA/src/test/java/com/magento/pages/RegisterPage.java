@@ -5,6 +5,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
 
 
 
@@ -35,7 +38,7 @@ public class RegisterPage extends BasePage{
 	By btnrIngresoLogin = By.xpath("//fieldset[@class='fieldset login']//span[contains(text(),'Sign In')]");
 	By errorMessage = By.xpath("//div[@class='messages']//div//div");
 	
-	
+
 	public RegisterPage(WebDriver driver) {
 		super(driver);
 		this.driver = driver;
@@ -70,36 +73,34 @@ public class RegisterPage extends BasePage{
 			boolean repass_error = driver.findElement(By.xpath("(//div[@id='password-confirmation-error'])[1]")).isDisplayed();
 			assertTrue(repass_error);
 	    	
-	    }	
-	    public void ingresarCorreovalido() {
-		   driver.findElement(signInLink).click();
-		   driver.findElement(email1).clear();
-	       driver.findElement(email1).sendKeys("angel46_318@hotmail.com");
-	       driver.findElement(password1).sendKeys("Elpeleador90@");
-	       driver.findElement(btnrIngresoLogin).click();    
 	    }
 
-		public void correoSinArroba() {
+	    @Test (dataProvider = "dataLogin")
+		public void doLoginCorreoValidoWithDataProvider(String email, String pass) {
+			
 			driver.findElement(signInLink).click();
-			driver.findElement(email1).clear();
-		    driver.findElement(email1).sendKeys("angel46_318hotmail.com");
-		    driver.findElement(password1).sendKeys("Elpeleador90@");
-		    driver.findElement(btnrIngresoLogin).click();
+			driver.findElement(email1).sendKeys(email);
+			driver.findElement(password).sendKeys(pass);
+			
+			
+		
 		}
-		public void correoSinDominio() {
-			driver.findElement(signInLink).click();
-			driver.findElement(email1).clear();
-		    driver.findElement(email1).sendKeys("angel46_318@");
-		    driver.findElement(password1).sendKeys("Elpeleador90@");
-		    driver.findElement(btnrIngresoLogin).click();
+	
+		@DataProvider
+		//clase padre
+		public Object[][] dataLogin()
+	        {
+			return new Object[][] 
+	               {
+				new Object[] {"angel46_318@hotmail.com","Elpeleador90@"}, // credenciales validas
+				new Object[] {"angel46_318hotmail.com","Elpeleador90@"}, // password invalido
+				new Object[] {"angel46_318@","Elpeleador90@"},// user invalido
+				new Object[] {"angel46_318@hotmail","Elpeleador90@"},
+			};
 		}
-		public void correoDominioIncompleto() {
-			driver.findElement(signInLink).click();
-			driver.findElement(email1).clear();
-		    driver.findElement(email1).sendKeys("angel46_318@hotmail");
-		    driver.findElement(password1).sendKeys("Elpeleador90@");
-		    driver.findElement(btnrIngresoLogin).click();
-		}
+	    
+	       
+	    
 		public void ContrasenaSegura() {
 			 driver.findElement(signInLink).click();
 			 driver.findElement(email1).clear();

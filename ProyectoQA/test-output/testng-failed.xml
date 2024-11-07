@@ -6,8 +6,8 @@
       <class name="com.magento.tests.RegisterTest">
         <methods>
           <include name="tearDown"/>
-          <include name="registerCampos"/>
           <include name="setup"/>
+          <include name="CorreoDataProvider"/>
         </methods>
       </class> <!-- com.magento.tests.RegisterTest -->
     </classes>
