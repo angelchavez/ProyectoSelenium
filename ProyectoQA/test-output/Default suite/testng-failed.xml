@@ -5,9 +5,10 @@
     <classes>
       <class name="com.magento.tests.RegisterTest">
         <methods>
+          <include name="CorreoDu"/>
           <include name="tearDown"/>
+          <include name="CorreoUn"/>
           <include name="setup"/>
-          <include name="CorreoDataProvider"/>
         </methods>
       </class> <!-- com.magento.tests.RegisterTest -->
     </classes>

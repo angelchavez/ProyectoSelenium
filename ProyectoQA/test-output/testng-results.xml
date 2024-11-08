@@ -1,27 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-06T22:40:46 GMT-05:00" name="Default suite" finished-at="2024-11-06T22:40:46 GMT-05:00" duration-ms="85">
+  <suite started-at="2024-11-08T08:11:13 GMT-05:00" name="Default suite" finished-at="2024-11-08T08:11:42 GMT-05:00" duration-ms="28544">
     <groups>
     </groups>
-    <test started-at="2024-11-06T22:40:46 GMT-05:00" name="Default test" finished-at="2024-11-06T22:40:46 GMT-05:00" duration-ms="85">
+    <test started-at="2024-11-08T08:11:13 GMT-05:00" name="Default test" finished-at="2024-11-08T08:11:42 GMT-05:00" duration-ms="28544">
       <class name="com.magento.tests.RegisterTest">
-        <test-method signature="CorreoDataProvider()[pri:0, instance:com.magento.tests.RegisterTest@4d9ac0b4]" started-at="2024-11-06T22:40:46 GMT-05:00" name="CorreoDataProvider" finished-at="2024-11-06T22:40:46 GMT-05:00" duration-ms="0" status="FAIL">
-          <exception class="org.testng.TestNGException">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.magento.tests.RegisterTest@4df5bcb4]" started-at="2024-11-08T08:11:13 GMT-05:00" name="setup" finished-at="2024-11-08T08:11:23 GMT-05:00" duration-ms="9742" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="CorreoDu()[pri:0, instance:com.magento.tests.RegisterTest@4df5bcb4]" started-at="2024-11-08T08:11:23 GMT-05:00" name="CorreoDu" finished-at="2024-11-08T08:11:29 GMT-05:00" duration-ms="6074" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
             <message>
-              <![CDATA[
-Method public void com.magento.tests.RegisterTest.CorreoDataProvider() requires a @DataProvider named : dataLogin]]>
+              <![CDATA[element click intercepted: Element <button type="submit" class="action submit primary" title="Create an Account">...</button> is not clickable at point (109, 605). Other element would receive the click: <div id="aswift_1_host" style="border: none !important; height: 50px !important; width: 100% !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: inline-block !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;">...</div>
+  (Session info: MicrosoftEdge=128.0.2739.79)
+Build info: version: '4.24.0', revision: '748ffc9bc3'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [c61b62d237519960468f0a1de9c3437a, clickElement {id=f.994550FE8DC6D40701A9193C8510336F.d.7169E8B0D676919B7CA6E15999C65328.e.37}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 128.0.2739.79, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:53962}, msedge: {msedgedriverVersion: 128.0.2739.113 (f9caf1e6393..., userDataDir: C:\Users\Angel\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53962/devtoo..., se:cdpVersion: 128.0.2739.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (c61b62d237519960468f0a1de9c3437a)] -> xpath: //*[@class='action submit primary']]
+Session ID: c61b62d237519960468f0a1de9c3437a]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Method public void com.magento.tests.RegisterTest.CorreoDataProvider() requires a @DataProvider named : dataLogin
-at org.testng.internal.Parameters.findDataProvider(Parameters.java:532)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:769)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:734)
-at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
-at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:946)
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button type="submit" class="action submit primary" title="Create an Account">...</button> is not clickable at point (109, 605). Other element would receive the click: <div id="aswift_1_host" style="border: none !important; height: 50px !important; width: 100% !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: inline-block !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;">...</div>
+  (Session info: MicrosoftEdge=128.0.2739.79)
+Build info: version: '4.24.0', revision: '748ffc9bc3'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [c61b62d237519960468f0a1de9c3437a, clickElement {id=f.994550FE8DC6D40701A9193C8510336F.d.7169E8B0D676919B7CA6E15999C65328.e.37}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 128.0.2739.79, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:53962}, msedge: {msedgedriverVersion: 128.0.2739.113 (f9caf1e6393..., userDataDir: C:\Users\Angel\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53962/devtoo..., se:cdpVersion: 128.0.2739.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (c61b62d237519960468f0a1de9c3437a)] -> xpath: //*[@class='action submit primary']]
+Session ID: c61b62d237519960468f0a1de9c3437a
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at com.magento.pages.RegisterPage.CorreoDuplicado(RegisterPage.java:92)
+at com.magento.tests.RegisterTest.CorreoDu(RegisterTest.java:108)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -43,10 +76,69 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CorreoDataProvider -->
+        </test-method> <!-- CorreoDu -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.magento.tests.RegisterTest@4df5bcb4]" started-at="2024-11-08T08:11:29 GMT-05:00" name="tearDown" finished-at="2024-11-08T08:11:29 GMT-05:00" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.magento.tests.RegisterTest@4df5bcb4]" started-at="2024-11-08T08:11:29 GMT-05:00" name="setup" finished-at="2024-11-08T08:11:37 GMT-05:00" duration-ms="7502" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="CorreoUn()[pri:0, instance:com.magento.tests.RegisterTest@4df5bcb4]" started-at="2024-11-08T08:11:37 GMT-05:00" name="CorreoUn" finished-at="2024-11-08T08:11:42 GMT-05:00" duration-ms="5152" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Mi cuenta] but found [Create New Customer Account]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Mi cuenta] but found [Create New Customer Account]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at com.magento.pages.RegisterPage.CorreoUnico(RegisterPage.java:83)
+at com.magento.tests.RegisterTest.CorreoUn(RegisterTest.java:103)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CorreoUn -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.magento.tests.RegisterTest@4df5bcb4]" started-at="2024-11-08T08:11:42 GMT-05:00" name="tearDown" finished-at="2024-11-08T08:11:42 GMT-05:00" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- com.magento.tests.RegisterTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

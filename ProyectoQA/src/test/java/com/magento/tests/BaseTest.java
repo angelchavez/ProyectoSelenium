@@ -7,6 +7,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+
 import com.magento.pages.HomePage;
 import com.magento.pages.LoginPage;
 import com.magento.pages.OrderPage;
@@ -15,7 +16,7 @@ import com.magento.pages.RegisterPage;
 
 public class BaseTest {
 
-	protected WebDriver driver;
+	public WebDriver driver;
 	protected RegisterPage registerPage;
 	protected HomePage homePage;
 	protected LoginPage loginPage;
@@ -31,7 +32,6 @@ public class BaseTest {
 		homePage= new HomePage(driver);
 		loginPage = new LoginPage(driver);
 		orderPage = new OrderPage(driver);
-		
 
 	}
 
@@ -39,7 +39,8 @@ public class BaseTest {
 	public void tearDown() {
 		if(driver!=null) {
 			//driver.quit();
-
+			
+    
 
 
 
