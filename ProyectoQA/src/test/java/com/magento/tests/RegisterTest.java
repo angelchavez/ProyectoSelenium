@@ -1,14 +1,12 @@
 package com.magento.tests;
 
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-
 public class RegisterTest extends BaseTest {
 
-	// WebDriver driver; conflicto no trabajar con dos o mas webdriver
+	//WebDriver driver; //conflicto no trabajar con dos o mas webdriver
 	 	
 	
 /*
@@ -77,7 +75,7 @@ public class RegisterTest extends BaseTest {
 			    new Object[] {"angel","chavez","angel46_3188@hotmail.com","123456"},
 			};
 		}
-			
+			*/
 	    @Test (dataProvider = "dataConfirmPasswordSecurity")
 		public void doConfirPasswordSecurity(String name,String lastname,String email, String pass,String pass1) 
 	    {    
@@ -98,49 +96,39 @@ public class RegisterTest extends BaseTest {
 				new Object[] {"angel","chavez","angel46_318@hotmail.com","TingoMaria90@","TingoMaria90@"}, //contraseñan coinciden 
 			    new Object[] {"angel","chavez","angel46_3188@hotmail.com","TingoMaria90@","TingoMaria"}, //	 contraseñas no coinciden
 			};
-		}*/
+	    }
+	    	
 	/*
-	public void CorreoUnico() {
-		  driver.findElement(registerLinkLocator).click();
-		  driver.findElement(firstname).sendKeys("rebosioo");
-		  driver.findElement(lastname).sendKeys("perez");
-		  driver.findElement(email).sendKeys("repere46_6789@hotmail.com");
-		  driver.findElement(password).sendKeys("TingoMaria@@@");
-		  driver.findElement(repassword).sendKeys("TingoMaria@@@");
-		  driver.findElement(btnregister).click();
-		  String expected_title = "Mi cuenta";
-		  String actual_title= driver.getTitle();
-		  Assert.assertEquals(actual_title,expected_title);
-	}
-	public void CorreoDuplicado() {
-		  driver.findElement(registerLinkLocator).click();
-		  driver.findElement(firstname).sendKeys("rebosioo");
-		  driver.findElement(lastname).sendKeys("perez");
-		  driver.findElement(email).sendKeys("repere46_6789@hotmail.com");
-		  driver.findElement(password).sendKeys("TingoMaria@@@");
-		  driver.findElement(repassword).sendKeys("TingoMaria@@@");
-		  driver.findElement(btnregister).click();
-		  WebElement element = driver.findElement(errorMessage); // Use the appropriate locator strategy
-	      String actualText = element.getText();
-	      String expectedText = "There is already an account with this email address. If you are sure that it is your email address, ";
-	      Assert.assertEquals(actualText, expectedText, "Text does not match!");
-	}*/
-/*
-	@Test
-	public void CorreoUn() {
-		registerPage.CorreoUnico();
-	}
-	@Test
-	public void CorreoDu() {
-
-	   registerPage.CorreoDuplicado();
-	}*/
-
-
-
-
-
-
-
-
+	    @Test (dataProvider = "dataEmail")
+		public void CorreoEmailUnico(String name,String lastname,String email, String pass,String pass1) 
+	    {    
+	    	
+			driver.findElement(registerPage.registerLinkLocator).click();		
+			driver.findElement(registerPage.firstname).sendKeys(name);
+			driver.findElement(registerPage.lastname).sendKeys(lastname);
+			driver.findElement(registerPage.email).sendKeys(email);
+			driver.findElement(registerPage.password).sendKeys(pass);
+			driver.findElement(registerPage.repassword).sendKeys(pass1);
+			driver.findElement(registerPage.btnregister).click();	
+		
+			if(email.equals("angel46_31889@hotmail.com")){
+				Assert.assertTrue(registerPage.isErrorMessageDisplayed(), "Error message should be displayed");
+	            Assert.assertTrue(registerPage.getErrorMessage().contains("There is already an account with this email address"), "Error message should indicate duplicate email");
+			    
+	            System.out.println("Registro de correo ya existe.");
+			
+			}else {
+				 System.out.println("Registro exitoso para correo único.");
+			}
+		}
+		@DataProvider
+		//clase padre
+		public Object[][] dataEmail()
+	        {
+			return new Object[][] 
+	               {
+				new Object[] {"angel","chavez","angel46_31889@hotmail.com","TingoMaria90@","TingoMaria90@"}, //correo que ya existe
+			    new Object[] {"robert","saldana","angel46_9999@hotmail.com","TingoMaria90@","TingoMaria90@"}, // correo nuevo
+			};
+	    }	*/
 }

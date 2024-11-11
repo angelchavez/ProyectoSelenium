@@ -2,8 +2,8 @@ package com.magento.pages;
 import static org.testng.Assert.assertTrue;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.testng.Assert;
+
+
 
 //El objetivo yo pueda tener todo los locatores ,
 //para que y cual es el objetivo pueda organizarme y tener mi test mas limpio y sin ningun locator dentro de mi test
@@ -12,26 +12,29 @@ import org.testng.Assert;
 public class RegisterPage extends BasePage{
 
 
-	protected WebDriver driver;
+	 WebDriver driver;
 	//by es una clase
 	/**
 	 * Web Elements
 	 *
 	 **/
 
-	public  By registerLinkLocator = By.linkText("Create an Account");
-	public By signInLink = By.xpath("//div[@class='panel header']//a[contains(text(),'Sign In')]");
-	public By firstname =By.id("firstname") ;
-	public By lastname =By.id("lastname") ;
-	public By email =By.id("email_address") ;
-	public By email1 = By.id("email");
-	public By email2 = By.xpath("//input[@id='email']");
-	public By password1 = By.xpath("//fieldset[@class='fieldset login']//input[@id='pass']");
-	public By password =By.id("password") ;
-	public By repassword =By.id("password-confirmation") ;
-	public By btnregister = By.xpath("//*[@class='action submit primary']");
-	public By btnrIngresoLogin = By.xpath("//fieldset[@class='fieldset login']//span[contains(text(),'Sign In')]");
-	public By errorMessage = By.xpath("//div[@class='messages']//div//div");
+	public    By registerLinkLocator = By.linkText("Create an Account");
+	public    By signInLink = By.xpath("//div[@class='panel header']//a[contains(text(),'Sign In')]");
+	public    By firstname =By.id("firstname") ;
+	public    By lastname =By.id("lastname") ;
+	public    By email =By.id("email_address") ;
+	public    By email1 = By.id("email");
+	public    By email2 = By.xpath("//input[@id='email']");
+	public    By password1 = By.xpath("//fieldset[@class='fieldset login']//input[@id='pass']");
+	public    By password =By.id("password") ;
+	public    By repassword =By.id("password-confirmation") ;
+	public    By btnregister = By.xpath("//*[@class='action submit primary']");
+	public    By btnrIngresoLogin = By.xpath("//fieldset[@class='fieldset login']//span[contains(text(),'Sign In')]");
+	public    By errorMessage = By.xpath("//div[@class='messages']//div//div");
+	
+    public    By errorMessage1 = By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[2]/div[1]/div[1]/div[1]");
+   
 	
 
 	public RegisterPage(WebDriver driver) {
@@ -69,7 +72,13 @@ public class RegisterPage extends BasePage{
 			boolean repass_error = driver.findElement(By.xpath("(//div[@id='password-confirmation-error'])[1]")).isDisplayed();
 			assertTrue(repass_error);	
 	    }
-
-	
+	    
+	    public String getErrorMessage() {
+	        return driver.findElement(errorMessage1).getText();
+	    }
+        
+	    public boolean isErrorMessageDisplayed() {
+	        return driver.findElement(errorMessage1).isDisplayed();
+	    }
 }
 

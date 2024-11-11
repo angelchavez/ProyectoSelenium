@@ -5,9 +5,8 @@
     <classes>
       <class name="com.magento.tests.RegisterTest">
         <methods>
-          <include name="CorreoDu"/>
           <include name="tearDown"/>
-          <include name="CorreoUn"/>
+          <include name="testEmailUnico"/>
           <include name="setup"/>
         </methods>
       </class> <!-- com.magento.tests.RegisterTest -->
