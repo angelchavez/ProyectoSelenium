@@ -32,9 +32,8 @@ public class RegisterPage extends BasePage{
 	public    By btnregister = By.xpath("//*[@class='action submit primary']");
 	public    By btnrIngresoLogin = By.xpath("//fieldset[@class='fieldset login']//span[contains(text(),'Sign In')]");
 	public    By errorMessage = By.xpath("//div[@class='messages']//div//div");
-	
-    public    By errorMessage1 = By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[2]/div[1]/div[1]/div[1]");
-   
+	public    By errorMessage1 = By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[2]/div[1]/div[1]/div[1]");
+    public    By passwordError = By.xpath("//div[@id='password-confirmation-error']");
 	
 
 	public RegisterPage(WebDriver driver) {
@@ -79,6 +78,10 @@ public class RegisterPage extends BasePage{
         
 	    public boolean isErrorMessageDisplayed() {
 	        return driver.findElement(errorMessage1).isDisplayed();
+	    }
+	    
+	    public boolean isPasswordDisplayed() {
+	    	return driver.findElement(passwordError).isDisplayed();
 	    }
 }
 

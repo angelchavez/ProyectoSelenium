@@ -77,7 +77,7 @@ public class RegisterTest extends BaseTest {
 		}
 			*/
 	    @Test (dataProvider = "dataConfirmPasswordSecurity")
-		public void doConfirPasswordSecurity(String name,String lastname,String email, String pass,String pass1) 
+		public void doConfirPasswordSecurity(String name,String lastname,String email, String pass,String pass1, boolean expectMismatch) 
 	    {    
 			driver.findElement(registerPage.registerLinkLocator).click();		
 			driver.findElement(registerPage.firstname).sendKeys(name);
@@ -85,7 +85,12 @@ public class RegisterTest extends BaseTest {
 			driver.findElement(registerPage.email).sendKeys(email);
 			driver.findElement(registerPage.password).sendKeys(pass);
 			driver.findElement(registerPage.repassword).sendKeys(pass1);
-			driver.findElement(registerPage.btnregister).click();		
+			driver.findElement(registerPage.btnregister).click();	
+			if (expectMismatch) {
+	            Assert.assertTrue(registerPage.isPasswordDisplayed(), "Error de confirmación no mostrado");
+	        } else {
+	            Assert.assertFalse(registerPage.isPasswordDisplayed(), "Error de confirmación mostrado cuando no debería");
+	        }
 		}
 		@DataProvider
 		//clase padre
