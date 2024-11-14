@@ -1,15 +1,19 @@
 package com.magento.tests;
 
 
+import org.testng.annotations.Test;
 
 public class LoginTest extends BaseTest {
 
 
-	//@Test
+	@Test
 	public void InicioSeExistoso() {
 
 		loginPage.InicioSesion();
-	}
+		
+     }
+
+	/*
 	//@Test
 	public void InicioSeIncorrecto() {
 
@@ -28,6 +32,6 @@ public class LoginTest extends BaseTest {
 	//@Test
 	public void ForgotthenPass()  {
 		loginPage.ForgottenPassword();
-	}
+	}*/
 
 }

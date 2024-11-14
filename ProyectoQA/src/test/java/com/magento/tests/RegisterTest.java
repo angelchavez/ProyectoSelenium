@@ -1,5 +1,4 @@
 package com.magento.tests;
-
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -8,17 +7,21 @@ public class RegisterTest extends BaseTest {
 
 	//WebDriver driver; //conflicto no trabajar con dos o mas webdriver
 	 	
-	
-/*
+
+    //Registro Exitoso
     @Test
 	public void registerAccount() {
-
+		 registerPage.registroexitoso();	 
+    }
+    
+    //Registro Cmapos obligatorio faltantes
+	@Test 
+    public void registroCampos() {
     	
-		 registerPage.registroexitoso();
-		 
-	
-    }*/
-   /*
+    	registerPage.registroCampos();
+    }
+ 
+   //Formato de Correo electornico Valido
         @Test (dataProvider = "dataCorreoElectronicoValido")
 		public void doLoginCorreoValidoWithDataProvider(String name,String lastname,String email, String pass) 
         {
@@ -47,7 +50,9 @@ public class RegisterTest extends BaseTest {
 			    
 			};
 		}
-
+		
+		
+     //Contraseña Segura
         @Test (dataProvider = "dataPasswordSecurity")
 		public void doPasswordSecurity(String name,String lastname,String email, String pass) 
         {
@@ -64,7 +69,6 @@ public class RegisterTest extends BaseTest {
 				
 		}
 		@DataProvider
-		//clase padre
 		public Object[][] dataPasswordSecurity()
 	        {
 			return new Object[][] 
@@ -75,10 +79,13 @@ public class RegisterTest extends BaseTest {
 			    new Object[] {"angel","chavez","angel46_3188@hotmail.com","123456"},
 			};
 		}
-			*/
+		
+		
+	   //Confirmacion de Contraseña
 	    @Test (dataProvider = "dataConfirmPasswordSecurity")
-		public void doConfirPasswordSecurity(String name,String lastname,String email, String pass,String pass1, boolean expectMismatch) 
-	    {    
+		public void doConfirPasswordSecurity(String name,String lastname,String email, String pass,String pass1) 
+	    {   
+	    	
 			driver.findElement(registerPage.registerLinkLocator).click();		
 			driver.findElement(registerPage.firstname).sendKeys(name);
 			driver.findElement(registerPage.lastname).sendKeys(lastname);
@@ -86,11 +93,16 @@ public class RegisterTest extends BaseTest {
 			driver.findElement(registerPage.password).sendKeys(pass);
 			driver.findElement(registerPage.repassword).sendKeys(pass1);
 			driver.findElement(registerPage.btnregister).click();	
-			if (expectMismatch) {
-	            Assert.assertTrue(registerPage.isPasswordDisplayed(), "Error de confirmación no mostrado");
-	        } else {
-	            Assert.assertFalse(registerPage.isPasswordDisplayed(), "Error de confirmación mostrado cuando no debería");
-	        }
+			
+			if(pass1.equals("TingoMaria90@")){
+				Assert.assertTrue(registerPage.isPasswordDisplayed(), "Error message should be displayed");
+	            Assert.assertTrue(registerPage.getErrorMessagePass().contains("Please enter the same value again."), "Error message should indicate duplicate password");
+			    
+	            System.out.println("El Password Coincide");
+			
+			}else {
+				 System.out.println("El Password no coincide");
+			}
 		}
 		@DataProvider
 		//clase padre
@@ -98,12 +110,13 @@ public class RegisterTest extends BaseTest {
 	        {
 			return new Object[][] 
 	               {
-				new Object[] {"angel","chavez","angel46_318@hotmail.com","TingoMaria90@","TingoMaria90@"}, //contraseñan coinciden 
-			    new Object[] {"angel","chavez","angel46_3188@hotmail.com","TingoMaria90@","TingoMaria"}, //	 contraseñas no coinciden
+				new Object[] {"angel","chavez","angel46_318@hotmail.com","TingoMaria90@","TingoMaria90@@"}, //contraseñan coinciden 
+			 //   new Object[] {"angel","chavez","angel46_3188@hotmail.com","TingoMaria90@","TingoMaria",false}, //	 contraseñas no coinciden
 			};
 	    }
-	    	
-	/*
+	   	
+		
+		//Correo Electronico Unico
 	    @Test (dataProvider = "dataEmail")
 		public void CorreoEmailUnico(String name,String lastname,String email, String pass,String pass1) 
 	    {    
@@ -135,5 +148,5 @@ public class RegisterTest extends BaseTest {
 				new Object[] {"angel","chavez","angel46_31889@hotmail.com","TingoMaria90@","TingoMaria90@"}, //correo que ya existe
 			    new Object[] {"robert","saldana","angel46_9999@hotmail.com","TingoMaria90@","TingoMaria90@"}, // correo nuevo
 			};
-	    }	*/
+	    }	
 }
